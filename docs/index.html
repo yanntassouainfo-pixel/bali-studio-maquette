@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Maquette de site proposée à Bali Studio par Yann Tassoua. Site non officiel.">
+<title>Bali Studio · Pilates Reformer et healthy café à Lomé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sable:#F3EADF; --creme:#FBF7F1; --terre:#B5603A; --terre-f:#8E4527; --rose:#EED3C6; --espresso:#2A1C15; --gris:#7A6A60; --filet:rgba(42,28,21,.13);
+  --c1:#9CCBC4; --c2:#F2AE86; --c3:#C6D59A; --c4:#CDBDE3; --c5:#F4D27C;
+  --t:'Marcellus',Georgia,serif; --s:'Outfit',system-ui,sans-serif;
+  --g:clamp(18px,4.2vw,60px);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--espresso);font:400 17px/1.6 var(--s);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.k{font:500 13px/1.2 var(--s);letter-spacing:.18em;text-transform:uppercase;color:var(--terre)}
+.h2{margin:14px 0 0;font:400 clamp(38px,4.4vw,64px)/1.04 var(--t);letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--terre);color:#fff;font:500 16px/1 var(--s);padding:18px 26px;border-radius:40px 40px 40px 6px}
+.btn.sombre{background:var(--espresso)}
+.btn.clair{background:#fff;color:var(--espresso)}
+.lien{font:500 16px/1 var(--s);border-bottom:1.5px solid currentColor;padding-bottom:5px}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px var(--g)}
+.logo{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+.logo b{font:400 34px/1 var(--t);letter-spacing:.12em;color:var(--terre)}
+.logo span{margin-top:5px;font:500 9.5px/1 var(--s);letter-spacing:.26em;text-transform:uppercase;color:var(--terre-f)}
+nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0;font:400 15.5px/1 var(--s)}
+
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,4vw,70px);padding:clamp(20px,3vw,40px) var(--g) clamp(50px,6vw,90px);align-items:center}
+.hero h1{margin:20px 0 0;font:400 clamp(52px,6.2vw,96px)/.98 var(--t);letter-spacing:-.015em}
+.hero h1 span{color:var(--terre)}
+.hero p.chapo{margin:26px 0 34px;max-width:500px;font:300 19.5px/1.55 var(--s);color:#4E3E35}
+.hero .actions{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.infos{display:flex;gap:30px;margin-top:44px;padding-top:24px;border-top:1px solid var(--filet);flex-wrap:wrap}
+.infos div b{display:block;font:400 22px/1.1 var(--t)}
+.infos div span{display:block;margin-top:6px;font-size:14px;color:var(--gris)}
+
+.scene{position:relative;height:min(78vh,700px)}
+.arche{position:absolute;right:0;top:0;width:78%;height:100%;border-radius:999px 999px 0 0;overflow:hidden;background:var(--sable)}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:40% 60%}
+.tasse{position:absolute;left:0;bottom:8%;width:40%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:10px solid var(--creme)}
+.tasse img{width:100%;height:100%;object-fit:cover;object-position:45% 55%}
+.tasse-legende{position:absolute;left:2%;bottom:calc(8% - 46px);font:500 13px/1.3 var(--s);color:var(--gris)}
+
+/* Aujourd'hui à Bali */
+.auj{position:absolute;left:4%;top:6%;width:300px;background:#fff;border-radius:22px;padding:20px 20px 16px;box-shadow:0 30px 60px -30px rgba(42,28,21,.35)}
+.auj .tete{display:flex;justify-content:space-between;align-items:baseline}
+.auj .tete b{font:400 21px/1 var(--t)}
+.auj .tete span{font:500 12px/1 var(--s);color:var(--gris);letter-spacing:.08em;text-transform:uppercase}
+.auj ul{list-style:none;margin:14px 0 0;padding:0}
+.auj li{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;padding:7px 0;border-top:1px solid var(--filet);font-size:14.5px}
+.auj li time{font:500 14px/1 var(--s);color:var(--gris)}
+.auj li span{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.auj li i{font-style:normal;font-size:12.5px;color:var(--gris)}
+.puce{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}
+.auj a{display:block;margin-top:12px;text-align:center;font:500 14px/1 var(--s);color:var(--terre)}
+
+/* Bandeau */
+.bandeau{background:var(--espresso);color:var(--sable);padding:22px var(--g);display:flex;gap:40px;justify-content:space-between;flex-wrap:wrap;font:400 15px/1.3 var(--s)}
+.bandeau b{color:#fff;font-weight:500}
+
+/* Disciplines */
+.disc{padding:clamp(70px,9vw,130px) var(--g)}
+.disc .tete{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:50px}
+.disc .tete p{margin:0;color:#4E3E35;max-width:500px;font-weight:300;font-size:18px}
+.cartes{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px}
+.carte{background:var(--sable);border-radius:28px;overflow:hidden;display:flex;flex-direction:column}
+.carte img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.carte.grande img{aspect-ratio:auto;flex:1;min-height:340px}
+.carte .corps{padding:24px 26px 28px}
+.carte h3{margin:0 0 8px;font:400 30px/1.05 var(--t)}
+.carte p{margin:0;color:#4E3E35;font-size:16px;font-weight:300}
+.carte .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.carte .tags span{font:500 12.5px/1 var(--s);padding:8px 11px;border-radius:30px;background:#fff}
+.carte .prix{margin-top:16px;font:500 15px/1 var(--s);color:var(--terre)}
+
+/* Planning */
+.planning{background:var(--sable);padding:clamp(70px,9vw,120px) var(--g)}
+.planning .tete{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px;flex-wrap:wrap}
+.jours{display:flex;gap:8px;flex-wrap:wrap}
+.jours span{font:500 14px/1 var(--s);padding:11px 16px;border-radius:30px;border:1px solid var(--filet);background:#fff}
+.jours span.on{background:var(--espresso);color:#fff;border-color:var(--espresso)}
+.grille{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.grille .col h4{margin:0 0 10px;font:500 13px/1 var(--s);letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.cours{border-radius:14px;padding:12px 13px;margin-bottom:8px;font-size:14px;line-height:1.3;background:#fff}
+.cours time{display:block;font:500 12.5px/1 var(--s);color:var(--gris);margin-bottom:6px}
+.cours b{display:block;font-weight:500}
+.cours i{font-style:normal;font-size:12.5px;color:var(--gris)}
+.cours.c1{background:#DCEEEB}.cours.c2{background:#FBE1D2}.cours.c3{background:#E8EFD3}.cours.c4{background:#ECE4F5}.cours.c5{background:#FBEFCB}
+.legende{display:flex;gap:22px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--gris)}
+
+/* Tarifs */
+.tarifs{padding:clamp(70px,9vw,130px) var(--g)}
+.tarifs .tete{max-width:700px;margin-bottom:46px}
+.tgrille{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tbloc{border:1px solid var(--filet);border-radius:26px;padding:26px 24px 28px;background:#fff}
+.tbloc.mis{background:var(--terre);color:#fff;border-color:var(--terre)}
+.tbloc .k{font-size:11.5px}
+.tbloc.mis .k{color:var(--rose)}
+.tbloc h3{margin:12px 0 20px;font:400 26px/1.1 var(--t)}
+.ligne{padding:14px 0;border-top:1px solid var(--filet)}
+.tbloc.mis .ligne{border-color:rgba(255,255,255,.25)}
+.ligne span{display:block;font-size:14.5px;color:var(--gris)}
+.tbloc.mis .ligne span{color:var(--rose)}
+.ligne b{display:block;margin-top:4px;font:400 26px/1 var(--t)}
+.ligne b small{font:400 14px/1 var(--s)}
+
+/* Challenge */
+.challenge{margin:0 var(--g);border-radius:36px;background:var(--espresso);color:var(--sable);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden}
+.challenge .g{padding:clamp(34px,5vw,70px)}
+.challenge .k{color:var(--c2)}
+.challenge h2{margin:16px 0 0;font:400 clamp(40px,4.4vw,64px)/1 var(--t);color:#fff}
+.challenge p{margin:20px 0 0;max-width:470px;font-weight:300}
+.challenge ul{margin:24px 0 30px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;font-size:15px}
+.challenge li:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--c2);margin-right:10px}
+.challenge .d{background:var(--terre);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px;position:relative}
+.challenge .d .dates{font:400 clamp(60px,6vw,96px)/.9 var(--t);color:#fff}
+.challenge .d .dates small{display:block;font:400 18px/1.3 var(--s);color:var(--rose);margin-top:14px;letter-spacing:.02em}
+.challenge .d .px{margin-top:34px;font:400 40px/1 var(--t);color:#fff}
+.challenge .d .px span{display:block;font:400 14px/1.3 var(--s);color:var(--rose);margin-top:8px}
+
+/* Café et lieu */
+.cafe{padding:clamp(80px,10vw,140px) var(--g);display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:center}
+.cafe .photo{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:4/5}
+.cafe .photo img{width:100%;height:100%;object-fit:cover}
+.cafe p.txt{margin:22px 0 0;color:#4E3E35;font-weight:300;font-size:18px;max-width:480px}
+.lieu{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.lieu figure{margin:0;border-radius:22px;overflow:hidden;position:relative}
+.lieu img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.lieu figcaption{position:absolute;left:12px;bottom:12px;background:#fff;border-radius:20px;padding:7px 12px;font:500 13px/1 var(--s)}
+
+/* Contact */
+.contact{margin:0 var(--g) clamp(60px,8vw,100px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.contact .bloc{background:var(--sable);border-radius:30px;padding:clamp(30px,4vw,54px)}
+.contact h2{margin:14px 0 0;font:400 clamp(38px,4vw,58px)/1.02 var(--t)}
+.contact dl{display:grid;grid-template-columns:auto 1fr;gap:14px 26px;margin:28px 0 30px;font-size:16px}
+.contact dt{color:var(--gris)} .contact dd{margin:0;font-weight:500}
+.carte-plan{border-radius:30px;background:#EADFD1;position:relative;overflow:hidden;min-height:380px}
+.carte-plan svg{position:absolute;inset:0;width:100%;height:100%}
+.carte-plan .pin{position:absolute;left:52%;top:46%;transform:translate(-50%,-100%);background:var(--terre);color:#fff;border-radius:20px 20px 20px 4px;padding:10px 14px;font:500 14px/1.2 var(--s);white-space:nowrap}
+.carte-plan .note{position:absolute;left:18px;bottom:16px;font-size:13px;color:var(--gris)}
+
+footer{background:var(--espresso);color:#CDBFB4;padding:54px var(--g) 26px}
+footer .haut{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer .logo b{color:var(--rose)} footer .logo span{color:#CDBFB4}
+footer h4{margin:0 0 14px;font:500 12.5px/1 var(--s);letter-spacing:.16em;text-transform:uppercase;color:var(--c2)}
+footer ul{list-style:none;margin:0;padding:0;font-size:15px;line-height:1.9}
+footer .bas{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:13px;color:#8E7F74}
+.mention{padding:12px var(--g) 16px;background:var(--espresso);color:#7E7066;font:400 12px/1.4 var(--s);text-align:right;border-top:1px solid rgba(255,255,255,.08)}
+
+@media (max-width:900px){
+  nav ul{display:none} nav .btn{display:none} nav .menu{display:block;font:500 15px/1 var(--s)}
+  .hero{grid-template-columns:1fr;gap:34px}
+  .hero h1{font-size:50px}
+  .scene{height:520px}
+  .arche{width:84%}
+  .auj{left:0;top:auto;bottom:0;width:240px;padding:14px 14px 10px}
+  .auj li{font-size:13px;grid-template-columns:44px 1fr} .auj li i{display:none}
+  .tasse{display:none}.tasse-legende{display:none}
+  .infos{gap:22px}
+  .disc .tete{grid-template-columns:1fr;gap:16px}
+  .cartes{grid-template-columns:1fr}
+  .grille{grid-template-columns:1fr}
+  .grille .col:not(:first-child){display:none}
+  .tgrille{grid-template-columns:1fr}
+  .challenge{grid-template-columns:1fr;margin:0 12px}
+  .challenge ul{grid-template-columns:1fr}
+  .cafe{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  footer .haut{grid-template-columns:1fr 1fr}
+  footer .bas{flex-direction:column;gap:8px}
+}
+
+.demo{background:#2A1C15;color:#F3EADF;text-align:center;font:400 13px/1.4 var(--s);padding:9px 16px}
+nav{position:relative}
+details.menu{display:none}
+details.menu summary{list-style:none;cursor:pointer;font:500 15px/1 var(--s);padding:10px 0}
+details.menu summary::-webkit-details-marker{display:none}
+details.menu[open] .panneau{display:flex}
+details.menu .panneau{position:absolute;left:0;right:0;top:100%;z-index:10;flex-direction:column;gap:2px;background:var(--creme);padding:10px var(--g) 22px;border-bottom:1px solid var(--filet);box-shadow:0 20px 30px -20px rgba(42,28,21,.3)}
+details.menu .panneau a{padding:12px 0;border-bottom:1px solid var(--filet);font-size:17px}
+details.menu .panneau a.btn{margin-top:14px;border:0;justify-content:center;display:flex!important}
+.jours span{cursor:pointer}
+.cours.cache{display:none}
+
+@media (max-width:900px){details.menu{display:block}.grille{gap:18px}.grille .col:not(:first-child){display:block!important}}
+</style>
+</head>
+<body>
+<div class="demo">Maquette de site proposée par Yann Tassoua · site non officiel de Bali Studio · images d'exemple</div>
+
+<nav>
+  <a class="logo" href="#"><b>BALI</b><span>Studio · Pilates &amp; wellness</span></a>
+  <ul><li><a href="#disciplines">Reformer</a></li><li><a href="#disciplines">Cours collectifs</a></li><li><a href="#planning">Planning</a></li><li><a href="#tarifs">Tarifs</a></li><li><a href="#cafe">Bali Café</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="btn" href="#contact">Réserver</a>
+  <details class="menu"><summary>Menu</summary><div class="panneau"><a href="#disciplines">Reformer et cours</a><a href="#planning">Planning</a><a href="#tarifs">Tarifs</a><a href="#cafe">Bali Café</a><a href="#contact">Contact</a><a class="btn" href="#contact">Réserver</a></div></details>
+</nav>
+
+<header class="hero">
+  <div>
+    <p class="k">Pilates Reformer · Boxe · CrossFit · Nukafu, Lomé</p>
+    <h1>On vient pour le Reformer.<br><span>On reste pour le café.</span></h1>
+    <p class="chapo">Des machines Reformer, des cours collectifs du matin au soir et un healthy coffee bar sur place. Bali Studio, près de l'église Sainte-Rita.</p>
+    <div class="actions"><a class="btn" href="#contact">Réserver ma première séance <span>→</span></a><a class="lien" href="#planning">Voir le planning</a></div>
+    <div class="infos">
+      <div><b>6h30 à 22h</b><span>du lundi au samedi</span></div>
+      <div><b>10 000 F</b><span>la séance Reformer de 50 min</span></div>
+      <div><b>38 cours</b><span>collectifs chaque semaine</span></div>
+    </div>
+  </div>
+  <div class="scene">
+    <div class="arche"><img src="img/studio-reformer.jpg" alt="Le studio Reformer"></div>
+    <div class="tasse"><img src="img/cafe.jpg" alt="Le Bali Café"></div>
+    <div class="auj">
+      <div class="tete"><b>Aujourd'hui à Bali</b><span>Lundi</span></div>
+      <ul>
+        <li><time>08h</time><span><i class="puce" style="background:var(--c1)"></i>Step aérobic</span></li>
+        <li><time>09h</time><span><i class="puce" style="background:var(--c1)"></i>Lady mat pilates</span></li>
+        <li><time>12h30</time><span><i class="puce" style="background:var(--c1)"></i>Sculpt haut du corps</span></li>
+        <li><time>18h</time><span><i class="puce" style="background:var(--c1)"></i>Mat pilates</span></li>
+        <li><time>19h</time><span><i class="puce" style="background:var(--c5)"></i>Flow yoga</span></li>
+        <li><time>20h</time><span><i class="puce" style="background:var(--c1)"></i>Sculpt abdos-fessiers</span></li>
+      </ul>
+      <a href="#planning">Tout le planning →</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau"><span><b>Nouveau</b> · une salle de massage</span><span><b>Bali Body Challenge</b> · du 18 novembre au 30 décembre</span><span><b>Kids</b> · boxe, afrodance et CrossFit pour les 6-14 ans, et Kids Reformer</span></div>
+
+<section class="disc" id="disciplines">
+  <div class="tete">
+    <div><p class="k">Ce qu'on fait ici</p><h2 class="h2">Gainer, transpirer,<br>souffler.</h2></div>
+    <p>Le Reformer pour travailler en profondeur, les cours collectifs pour se dépenser en groupe, et la salle de massage pour finir la semaine.</p>
+  </div>
+  <div class="cartes">
+    <article class="carte grande"><img src="img/studio-reformer.jpg" alt="Pilates Reformer" style="object-position:50% 70%"><div class="corps"><h3>Pilates Reformer</h3><p>Séances de 50 minutes sur machine, à la carte, en abonnement ou en cours privé. Aussi pour les enfants.</p><p class="prix">Dès 10 000 F la séance</p></div></article>
+    <article class="carte"><img src="img/cours-collectif.jpg" alt="Cours collectifs"><div class="corps"><h3>Cours collectifs</h3><p>38 cours par semaine, de 8h à 20h, encadrés par les coachs du studio.</p><div class="tags"><span>Mat pilates</span><span>Boxe</span><span>CrossFit</span><span>Step</span><span>Afro Zumba</span><span>Yoga</span><span>Djembel</span></div></div></article>
+    <article class="carte"><img src="img/massage.jpg" alt="Salle de massage"><div class="corps"><h3>Massage</h3><p>La nouvelle salle de massage du studio, pour récupérer après l'effort.</p><p class="prix">Nouveau au studio</p></div></article>
+  </div>
+</section>
+
+<section class="planning" id="planning">
+  <div class="tete"><div><p class="k">Planning des cours collectifs</p><h2 class="h2">Votre semaine à Bali.</h2></div>
+    <div class="jours"><span class="on" data-f="tout">Toute la semaine</span><span data-f="c1">Pilates</span><span data-f="c2">Cardio</span><span data-f="c3 c5">Danse et yoga</span><span data-f="c4">Kids</span></div></div>
+  <div class="grille">
+    <div class="col"><h4>Lundi</h4>
+      <div class="cours c1"><time>08h</time><b>Step aérobic</b></div>
+      <div class="cours c1"><time>09h</time><b>Lady mat pilates</b></div>
+      <div class="cours c1"><time>12h30</time><b>Sculpt haut du corps</b></div>
+      <div class="cours c1"><time>18h</time><b>Mat pilates</b></div>
+      <div class="cours c5"><time>19h</time><b>Flow yoga</b></div>
+      <div class="cours c1"><time>20h</time><b>Sculpt abdos-fessiers</b></div>
+    </div>
+    <div class="col"><h4>Mardi</h4>
+      <div class="cours c1"><time>08h</time><b>Mat pilates</b></div>
+      <div class="cours c1"><time>09h</time><b>Lady sculpt abdos-fessiers</b></div>
+      <div class="cours c1"><time>12h30</time><b>Mat pilates</b></div>
+      <div class="cours c3"><time>18h</time><b>Djembel</b></div>
+      <div class="cours c2"><time>19h</time><b>CrossFit</b></div>
+      <div class="cours c2"><time>20h</time><b>Boxe</b></div>
+    </div>
+    <div class="col"><h4>Mercredi</h4>
+      <div class="cours c1"><time>08h</time><b>Sculpt abdos-fessiers</b></div>
+      <div class="cours c2"><time>09h</time><b>Lady CrossFit</b></div>
+      <div class="cours c2"><time>12h30</time><b>CrossFit</b></div>
+      <div class="cours c4"><time>14h</time><b>Kids boxing 6-14 ans</b></div>
+      <div class="cours c4"><time>15h</time><b>Kids afrodance 6-14 ans</b></div>
+      <div class="cours c1"><time>18h</time><b>Step aérobic</b></div>
+      <div class="cours c1"><time>19h</time><b>Mat pilates</b></div>
+      <div class="cours c2"><time>20h</time><b>CrossFit</b></div>
+    </div>
+    <div class="col"><h4>Jeudi</h4>
+      <div class="cours c1"><time>08h</time><b>Mat pilates</b></div>
+      <div class="cours c1"><time>09h</time><b>Lady step aérobic</b></div>
+      <div class="cours c1"><time>12h30</time><b>Lady step aérobic</b></div>
+      <div class="cours c1"><time>18h</time><b>Aérobic step</b></div>
+      <div class="cours c2"><time>19h</time><b>CrossFit</b></div>
+      <div class="cours c2"><time>20h</time><b>Boxe</b></div>
+    </div>
+    <div class="col"><h4>Vendredi</h4>
+      <div class="cours c1"><time>08h</time><b>Sculpt haut du corps</b></div>
+      <div class="cours c1"><time>09h</time><b>Lady sculpt haut du corps</b></div>
+      <div class="cours c1"><time>12h30</time><b>Sculpt abdos-fessiers</b></div>
+      <div class="cours c3"><time>18h</time><b>Afro Zumba</b></div>
+      <div class="cours c5"><time>19h</time><b>Power yoga</b></div>
+      <div class="cours c1"><time>20h</time><b>Lady sculpt full body</b></div>
+    </div>
+    <div class="col"><h4>Samedi</h4>
+      <div class="cours c1"><time>11h</time><b>Mat pilates</b></div>
+      <div class="cours c1"><time>12h30</time><b>Sculpt full body</b></div>
+      <div class="cours c4"><time>14h</time><b>Kids afrodance 6-14 ans</b></div>
+      <div class="cours c4"><time>15h</time><b>Kids CrossFit 6-14 ans</b></div>
+      <div class="cours c2"><time>16h</time><b>CrossFit</b></div>
+      <div class="cours c2"><time>16h</time><b>Boxe</b></div>
+    </div>
+  </div>
+  <div class="legende"><span><i class="puce" style="background:var(--c1)"></i>Pilates et renforcement</span><span><i class="puce" style="background:var(--c2)"></i>Cardio, boxe, CrossFit</span><span><i class="puce" style="background:var(--c3)"></i>Danse</span><span><i class="puce" style="background:var(--c5)"></i>Yoga</span><span><i class="puce" style="background:var(--c4)"></i>Kids</span></div>
+</section>
+
+<section class="tarifs" id="tarifs">
+  <div class="tete"><p class="k">Tarifs Pilates Reformer</p><h2 class="h2">Une séance pour essayer, un abonnement pour progresser.</h2></div>
+  <div class="tgrille">
+    <div class="tbloc"><p class="k">1 · À la carte</p><h3>Pour commencer</h3><div class="ligne"><span>Séance unique · 50 min</span><b>10 000 <small>F CFA</small></b></div><div class="ligne"><span>Carnet de 10 séances · valable 3 mois</span><b>80 000 <small>F CFA</small></b></div></div>
+    <div class="tbloc mis"><p class="k">2 · Abonnements mensuels</p><h3>À volonté</h3><div class="ligne"><span>Reformer adultes · séances à volonté</span><b>50 000 <small>F CFA / mois</small></b></div><div class="ligne"><span>Kids Reformer</span><b>30 000 <small>F CFA / mois</small></b></div></div>
+    <div class="tbloc"><p class="k">3 · Cours privés</p><h3>En tête-à-tête</h3><div class="ligne"><span>Séance privée · 50 min</span><b>20 000 <small>F CFA</small></b></div><div class="ligne"><span>Carnet de 10 séances privées</span><b>180 000 <small>F CFA</small></b></div></div>
+    <div class="tbloc"><p class="k">4 · Formules mixtes</p><h3>Tout Bali</h3><div class="ligne"><span>Reformer + tous les cours collectifs</span><b>100 000 <small>F CFA</small></b></div><div class="ligne"><span>Mixte Kids · Reformer, boxe, afrodance</span><b>40 000 <small>F CFA</small></b></div></div>
+  </div>
+</section>
+
+<section class="challenge">
+  <div class="g">
+    <p class="k">En ce moment</p>
+    <h2>Bali Body Challenge</h2>
+    <p>Six semaines pour reprendre la main sur son corps et son assiette, avec un suivi de l'équipe du studio.</p>
+    <ul><li>Consultation initiale</li><li>Programme nutritionnel</li><li>6 semaines de recettes</li><li>Liste de courses chaque semaine</li><li>Journal de bord quotidien</li><li>3 consultations de suivi</li></ul>
+    <a class="btn clair" href="#contact">Je m'inscris <span>→</span></a>
+  </div>
+  <div class="d"><div class="dates">18.11<br>30.12<small>du 18 novembre au 30 décembre 2026</small></div><div class="px">60 000 F<span>le challenge complet</span></div></div>
+</section>
+
+<section class="cafe" id="cafe">
+  <div class="photo"><img src="img/cafe.jpg" alt="Le Bali Café"></div>
+  <div>
+    <p class="k">Bali Café</p>
+    <h2 class="h2">Après la séance, on s'assoit.</h2>
+    <p class="txt">Le healthy coffee bar du studio. On y passe avant le cours, ou en sortant du Reformer, pour un café ou quelque chose de frais. Pour commander, un message suffit.</p>
+    <p style="margin:26px 0 0"><a class="btn sombre" href="#">Commander au Bali Café <span>→</span></a></p>
+    <div class="lieu">
+      <figure><img src="img/jardin.jpg" alt="Le jardin"><figcaption>Le jardin</figcaption></figure>
+      <figure><img src="img/massage.jpg" alt="La salle de massage"><figcaption>La salle de massage</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="bloc">
+    <p class="k">Réserver, venir</p>
+    <h2>Votre première séance commence ici.</h2>
+    <dl>
+      <dt>Réservations</dt><dd>WhatsApp +228 71 52 52 71</dd>
+      <dt>Secrétariat</dt><dd>22 60 61 06</dd>
+      <dt>Bali Café</dt><dd>+228 92 98 75 62</dd>
+      <dt>E-mail</dt><dd>balistudio.togo@gmail.com</dd>
+      <dt>Adresse</dt><dd>Nukafu, dans le von de l'église Sainte-Rita, Lomé</dd>
+      <dt>Horaires</dt><dd>Du lundi au samedi, de 6h30 à 22h</dd>
+    </dl>
+    <a class="btn" href="#">Réserver sur WhatsApp <span>→</span></a>
+  </div>
+  <div class="carte-plan">
+    <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round"><path d="M-20 300 C 150 260, 300 330, 640 250"/><path d="M180 -20 L 260 460"/><path d="M420 -20 C 400 150, 460 280, 430 460"/></g><g fill="none" stroke="#F7EFE6" stroke-width="6"><path d="M-20 120 L 640 160"/><path d="M60 460 L 560 -20"/></g><circle cx="330" cy="200" r="14" fill="#B5603A" opacity=".25"/></svg>
+    <span class="pin">Bali Studio · près de l'église Sainte-Rita</span>
+    <span class="note">Plan indicatif · carte Google à intégrer</span>
+  </div>
+</section>
+
+<footer>
+  <div class="haut">
+    <div><span class="logo"><b>BALI</b><span>Studio · Pilates &amp; wellness</span></span><p style="margin:18px 0 0;max-width:300px;font-size:15px">Pilates Reformer, cours collectifs, massage et healthy coffee bar, à Nukafu, Lomé.</p></div>
+    <div><h4>Le studio</h4><ul><li>Pilates Reformer</li><li>Cours collectifs</li><li>Kids</li><li>Massage</li></ul></div>
+    <div><h4>Infos</h4><ul><li>Planning</li><li>Tarifs</li><li>Bali Body Challenge</li><li>Bali Café</li></ul></div>
+    <div><h4>Nous suivre</h4><ul><li>Instagram @balistudio_togo</li><li>TikTok</li><li>Facebook</li></ul></div>
+  </div>
+  <div class="bas"><span>© 2026 Bali Studio</span><span>Mentions légales</span></div>
+</footer>
+<div class="mention">Maquette de travail · images de substitution générées · contenus à valider</div>
+<script>
+document.querySelectorAll('.jours span').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('.jours span').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+  var f=b.dataset.f.split(' ');
+  document.querySelectorAll('.cours').forEach(function(c){var ok=f[0]==='tout'||f.some(function(k){return c.classList.contains(k)});c.classList.toggle('cache',!ok)});
+})});
+document.querySelectorAll('a[href="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();alert('Maquette : ce bouton ouvrira WhatsApp sur le site final.')})});
+document.querySelectorAll('details.menu a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').removeAttribute('open')})});
+</script>
+</body>
+</html>
